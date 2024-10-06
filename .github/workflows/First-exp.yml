@@ -10,4 +10,4 @@ jobs:
             - name: list files
               run: ls -la
             - name: ReadME
-              run: car README.md
+              run: cat README.md
