@@ -8,8 +8,12 @@ jobs:
             - name: checkout repo
               uses: actions/checkout@v4
             - name: welcome message
-              run: echo "my first "
-            - name: list files
-              run: ls -la
-            - name: ReadME
-              run: cat README.md
+              run: | 
+                    echo "my first "
+                    ls -la
+                    cat README.md
+
+            - name: GENRATE ASCII
+              run: cowsay -f dragon "run for cover, I AM A DRAGON..!!!AAHHAA" >> gragon.txt
+
+          
