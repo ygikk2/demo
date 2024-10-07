@@ -12,7 +12,7 @@ jobs:
             - name: execute shell
               run: | 
                     
-                    chmod +x asciishell.sh
+                    chmod +x .github/workflows/asciishell.sh 
                     .github/workflows/asciishell.sh 
 
             
