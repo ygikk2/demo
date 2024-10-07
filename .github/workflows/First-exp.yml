@@ -13,7 +13,15 @@ jobs:
                     ls -la
                     cat README.md
 
+            - name: install cowsay
+              run: sudo apt-get install cowsay -y
+
             - name: GENRATE ASCII
               run: cowsay -f dragon "run for cover, I AM A DRAGON..!!!AAHHAA" >> gragon.txt
+
+            - name: GENRATE ASCII
+              run: cat gragon.txt
+
+            
 
           
