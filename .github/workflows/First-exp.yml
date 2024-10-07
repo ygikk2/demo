@@ -7,20 +7,8 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
-            - name: welcome message
-              run: | 
-                    echo "my first "
-                    ls -la
-                    cat README.md
-
-            - name: install cowsay
-              run: sudo apt-get install cowsay -y
-
-            - name: GENRATE ASCII
-              run: cowsay -z dragon "run for cover, I AM A DRAGON..!!!AAHHAA" >> gragon.txt
-
-            - name: GENRATE ASCII
-              run: cat gragon.txt
+            - name: execute shell
+              run: ./asciishell.sh 
 
             
 
