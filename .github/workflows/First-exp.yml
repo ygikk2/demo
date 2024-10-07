@@ -15,11 +15,13 @@ jobs:
                     chmod +x .github/workflows/asciishell.sh 
                     .github/workflows/asciishell.sh 
     job-2test:
+        needs: first-job
         runs-on: ubuntu-latest
         steps:
             - name: test
               run: grep -i "dragon" gragon.txt
     job-3deploy:
+        needs: job-2test
         runs-on: ubuntu-latest
         steps:
             - name: CD
