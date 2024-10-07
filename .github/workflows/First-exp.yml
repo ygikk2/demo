@@ -10,9 +10,10 @@ jobs:
             - name: list
               run: ls -ltra
             - name: execute shell
-              run: |
+              run: | 
+                    
                     chmod +x asciishell.sh
-                    ./asciishell.sh 
+                    .github/workflows/asciishell.sh 
 
             
 
