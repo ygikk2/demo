@@ -10,7 +10,9 @@ jobs:
             - name: list
               run: ls -ltra
             - name: execute shell
-              run: ./asciishell.sh 
+              run: |
+                    chmod +x asciishell.sh
+                    ./asciishell.sh 
 
             
 
