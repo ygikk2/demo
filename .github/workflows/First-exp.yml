@@ -14,16 +14,32 @@ jobs:
                     
                     chmod +x .github/workflows/asciishell.sh 
                     .github/workflows/asciishell.sh 
+            - name: upload dragon file
+              uses: actions/upload-artifact@v4
+              with:
+               name: dragon-file
+               path: gragon.txt
     job-2test:
         needs: first-job
+       
         runs-on: ubuntu-latest
         steps:
+            - name: upload dragon file
+              uses: actions/download-artifact@v4
+              with:
+               name: dragon-file
+               
             - name: test
               run: grep -i "dragon" gragon.txt
     job-3deploy:
         needs: job-2test
         runs-on: ubuntu-latest
         steps:
+            - name: upload dragon file
+              uses: actions/download-artifact@v4
+              with:
+               name: dragon-file
+                
             - name: CD
               run: |
                 cat gragon.txt
